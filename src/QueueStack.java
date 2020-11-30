@@ -8,7 +8,6 @@ This is a the class that defines a queue using stacks.
 public class QueueStack<T> {
 
 
-    private int length;
     private Stack firstStack;
     private Stack secondStack;
 
@@ -20,6 +19,9 @@ public class QueueStack<T> {
 
 
 
+    public boolean isEmpty() { //checks if stack is empty
+        return secondStack.isEmpty();
+    }
 
 
     public void enqueue(T element) { //add an element
@@ -40,6 +42,12 @@ public class QueueStack<T> {
         return (T)secondStack.pop();
     }
 
+    public int size() {
+        return secondStack.size();
+    }
 
+    public T peek() { //look at the top element without removing
+        return (T)secondStack.peek();
+    }
 
 }
