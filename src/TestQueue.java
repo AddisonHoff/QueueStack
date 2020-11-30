@@ -10,7 +10,7 @@ import java.util.*;
 public class TestQueue {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        Queue st = new Queue(); //real stack
+        QueueStack st = new QueueStack(); //real stack
 
         //should return true
         System.out.println(st.isEmpty());

@@ -13,8 +13,9 @@ public class QueueStack<T> {
     private Stack secondStack;
 
 
-    public QueueStack() {
-
+    public QueueStack(Stack oneStack, Stack twoStack) {
+        firstStack = oneStack;
+        secondStack = twoStack;
     }
 
     public void arrangeStack() { //enters firstStack into secondStack backwards to make it easier to manage
@@ -23,22 +24,16 @@ public class QueueStack<T> {
 
 
     public boolean isEmpty() { //checks if stack is empty
-        if (length == 0) {
-            return true;
-        } else {
-            return false;
-        }
+
     }
 
 
     public void enqueue(T element) { //add an element
 
-        }
     }
 
     public T dequeue() { //remove and return the first element
 
-        }
     }
 
     public int size() {
@@ -46,6 +41,7 @@ public class QueueStack<T> {
     }
 
     public T peek() { //look at the top element without removing
+
     }
 
 }
