@@ -12,6 +12,7 @@ public class TestQueue {
         Scanner s = new Scanner(System.in);
         QueueStack st = new QueueStack(); //real stack
 
+
         //should return true
         System.out.println(st.isEmpty());
 

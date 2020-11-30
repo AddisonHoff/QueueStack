@@ -13,35 +13,33 @@ public class QueueStack<T> {
     private Stack secondStack;
 
 
-    public QueueStack(Stack oneStack, Stack twoStack) {
-        firstStack = oneStack;
-        secondStack = twoStack;
-    }
-
-    public void arrangeStack() { //enters firstStack into secondStack backwards to make it easier to manage
-
+    public QueueStack() {
+        firstStack = new Stack();
+        secondStack = new Stack();
     }
 
 
-    public boolean isEmpty() { //checks if stack is empty
 
-    }
 
 
     public void enqueue(T element) { //add an element
 
+        while(secondStack.size() > 0) {
+            firstStack.push(secondStack.pop());
+        }
+
+        firstStack.push(element);
+
+        while(firstStack.size() > 0){
+            secondStack.push(firstStack.pop());
+        }
+
     }
 
     public T dequeue() { //remove and return the first element
-
+        return (T)secondStack.pop();
     }
 
-    public int size() {
-        return secondStack.size();
-    }
 
-    public T peek() { //look at the top element without removing
-
-    }
 
 }
