@@ -48,7 +48,7 @@ public class QueueStack<T> {
     }
 
     public T peek() { //look at the top element without removing
-        return secondStack.peek();
+        return (T) secondStack.peek();
     }
 
 }
