@@ -20,7 +20,7 @@ public class QueueStack<T> {
 
 
     public boolean isEmpty() { //checks if stack is empty
-        
+        return firstStack.isEmpty() && secondStack.isEmpty();
     }
 
 
@@ -43,11 +43,12 @@ public class QueueStack<T> {
     }
 
     public int size() {
+        return firstStack.size() + secondStack.size();
         
     }
 
     public T peek() { //look at the top element without removing
-        
+        return secondStack.peek();
     }
 
 }
