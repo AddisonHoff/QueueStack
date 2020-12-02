@@ -1,6 +1,6 @@
 # QueueStack
 
-Druv Sharma and Addison Hoff
+Dhruv Sharma and Addison Hoff
 
 12/1/2020
 
