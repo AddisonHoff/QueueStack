@@ -8,40 +8,46 @@ This is a the class that defines a queue using stacks.
 public class QueueStack<T> {
 
 
-    private int length;
     private Stack firstStack;
     private Stack secondStack;
 
 
-    public QueueStack(Stack oneStack, Stack twoStack) {
-        firstStack = oneStack;
-        secondStack = twoStack;
+    public QueueStack() {
+        firstStack = new Stack();
+        secondStack = new Stack();
     }
 
-    public void arrangeStack() { //enters firstStack into secondStack backwards to make it easier to manage
-
-    }
 
 
     public boolean isEmpty() { //checks if stack is empty
-
+        
     }
 
 
     public void enqueue(T element) { //add an element
 
+        while(secondStack.size() > 0) {
+            firstStack.push(secondStack.pop());
+        }
+
+        firstStack.push(element);
+
+        while(firstStack.size() > 0){
+            secondStack.push(firstStack.pop());
+        }
+
     }
 
     public T dequeue() { //remove and return the first element
-
+        return (T)secondStack.pop();
     }
 
     public int size() {
-        return secondStack.size();
+        
     }
 
     public T peek() { //look at the top element without removing
-
+        
     }
 
 }
